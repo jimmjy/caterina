@@ -1,3 +1,10 @@
+.nav-bar {
+  background-color: #fff;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
+  width: 100%;
+}
+
 #custom-nav-item.active {
   color: red; //change
 }

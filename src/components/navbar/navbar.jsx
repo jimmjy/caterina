@@ -16,7 +16,7 @@ import "./navbar.scss";
 
 const Navigation = () => {
   return (
-    <Navbar bg="light" expand="lg" collapseOnSelect={true}>
+    <Navbar className="nav-bar" expand="lg" collapseOnSelect={true}>
       <Navbar.Brand as={Link} to="/">
         <img width="60" height="60" src={Logo} alt="" />
         Caterina Psychotherapy
@@ -25,7 +25,13 @@ const Navigation = () => {
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav defaultActiveKey="/">
           {navLinks.map(({ name, link }) => (
-            <Nav.Link id="custom-nav-item" eventKey={link} to={link} as={Link}>
+            <Nav.Link
+              key={name}
+              id="custom-nav-item"
+              eventKey={link}
+              to={link}
+              as={Link}
+            >
               {name}
             </Nav.Link>
           ))}

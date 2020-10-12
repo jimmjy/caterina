@@ -1,3 +1,5 @@
+import image from "../assets/cate.JPG";
+
 export const navLinks = [
   { name: "Home", link: "/" },
   {
@@ -21,3 +23,5 @@ export const navLinks = [
     link: "/contact",
   },
 ];
+
+export const profilePic = image;

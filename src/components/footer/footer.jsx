@@ -5,16 +5,16 @@ import "./footer.scss";
 
 const Footer = () => {
   return (
-    <footer class="page-footer font-small blue pt-4 footer">
-      <div class="container-fluid text-center text-md-left">
+    <footer className="page-footer font-small footer">
+      {/* <div class="container-fluid text-center text-md-left">
         <div class="row">
           <div class="col-md-6 mt-md-0 mt-3">
             <h5 class="text-uppercase">Footer Content</h5>
             <p>possible content here</p>
           </div>
         </div>
-      </div>
-      <div class="footer-copyright text-center py-3">
+      </div> */}
+      <div className="footer-copyright text-center py-3">
         © 2020 Copyright Caterina Gennaro Psychotherapy
       </div>
     </footer>
