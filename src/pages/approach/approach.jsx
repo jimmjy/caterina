@@ -4,14 +4,14 @@ import React from 'react';
 import { PageTitle } from '../../components';
 
 //styles
-import './blog.scss';
+import './approach.scss';
 
-const Blog = () => {
+const Approach = () => {
 	return (
 		<div>
-			<PageTitle title='Blog' />
+			<PageTitle title='My Approach' />
 		</div>
 	);
 };
 
-export default Blog;
+export default Approach;

@@ -1,9 +1,10 @@
 .footer {
-  box-sizing: border-box;
-  background-color: #fff;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  border-top-color: rgba(0, 0, 0, 0.1);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px -1px 0px 0px;
+	box-sizing: border-box;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	border-top-color: rgba(0, 0, 0, 0.1);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px -1px 0px 0px;
+	z-index: 100;
 }

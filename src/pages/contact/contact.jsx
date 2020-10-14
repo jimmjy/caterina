@@ -1,10 +1,17 @@
-import React from "react";
+import React from 'react';
+
+//components
+import { PageTitle } from '../../components';
 
 //styles
-import "./contact.scss";
+import './contact.scss';
 
 const Contact = () => {
-  return <div>contact</div>;
+	return (
+		<div>
+			<PageTitle title='Contact' />
+		</div>
+	);
 };
 
 export default Contact;
