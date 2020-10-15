@@ -28,7 +28,7 @@ const Services = () => {
 						<Col>
 							{STRESSORS.map((stress) => (
 								<div className='stress-type'>
-									<p className='stress-title'>{stress.title}</p>
+									<h4 className='stress-title'>{stress.title}</h4>
 									<p className='stress-description'>{stress.description}</p>
 								</div>
 							))}

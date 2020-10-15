@@ -1,10 +1,21 @@
+.fee-grid {
+	margin-bottom: 30px;
+}
+
 .fee-title {
-	background-color: red;
-	height: 100px;
-	border: 1px solid blue;
+	height: 200px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	// color: white;
+
+	&.title-0 {
+		background-color: #b2f1df;
+	}
+
+	&.title-1 {
+		background-color: #35858d;
+	}
 }
 
 .fee-description-container {
@@ -12,6 +23,15 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	// color: white;
+
+	&.description-0 {
+		background-color: #9fedd7;
+	}
+
+	&.description-1 {
+		background-color: #026670;
+	}
 }
 
 .fee-description {

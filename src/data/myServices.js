@@ -54,13 +54,12 @@ export const WHAT_I_OFFER = {
 		'Relationship Difficulties',
 		'Life Transitions',
 		'Difficulties with Self-Esteem & Self-Worth',
-		'Eating Issues',
 		'Obsessive Compulsive Disorder (OCD)',
-		'Post-Traumatic Stress Disorder',
+
 		'Professional/Career Issues',
 		'College/Graduate School Issues',
 		'Stress Management',
-		'Sexual Abuse',
+
 		'Spirituality',
 		'Gender Identity Support',
 		'LGBT Counseling',
