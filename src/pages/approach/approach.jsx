@@ -22,7 +22,7 @@ const Approach = () => {
 					<Row>
 						<Col>
 							{aboveImage.map((content) => (
-								<p>{content}</p>
+								<p key={content}>{content}</p>
 							))}
 						</Col>
 					</Row>
@@ -34,7 +34,7 @@ const Approach = () => {
 							<p>{belowImage.listTitle}</p>
 							<ul>
 								{belowImage.listItems.map((item) => (
-									<li>{item}</li>
+									<li key={item}>{item}</li>
 								))}
 							</ul>
 						</Col>

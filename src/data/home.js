@@ -10,7 +10,8 @@ export const SERVICES = [
 			'While anxiety is a normal part of life, oftentimes, it can escalate to an unmanageable level.',
 		link: {
 			title: 'Read More',
-			url: '/services#anxiety', //look up reach router for going to point in page
+			url: '/services', //look up reach router for going to point in page,
+			ref: 'Anxiety',
 		},
 	},
 	{
@@ -19,7 +20,8 @@ export const SERVICES = [
 			'Depression can take root in our bodies and significantly impact our outlook on life in a negative way.',
 		link: {
 			title: 'Read More',
-			url: '/services#depression', //look up reach router for going to point in page
+			url: '/services', //look up reach router for going to point in page,
+			ref: 'Depression',
 		},
 	},
 	{
@@ -28,7 +30,8 @@ export const SERVICES = [
 			'Feeling a sense of unworthiness or a lack in confidence has a profound effect on who we are as individuals.',
 		link: {
 			title: 'Read More',
-			url: '/services#self-worth', //look up reach router for going to point in page
+			url: '/services', //look up reach router for going to point in page
+			ref: 'SelfWorth',
 		},
 	},
 	{
@@ -37,7 +40,8 @@ export const SERVICES = [
 			'Interactions with other people are the cornerstone of our lives. Therapy can help make these interactions more meaningful.',
 		link: {
 			title: 'Read More',
-			url: '/services#relationships', //look up reach router for going to point in page
+			url: '/services', //look up reach router for going to point in page,
+			ref: 'Relationships',
 		},
 	},
 	{
@@ -46,7 +50,8 @@ export const SERVICES = [
 			'Left unchecked, stress can impact our physical, mental and emotional health and well-being.',
 		link: {
 			title: 'Read More',
-			url: '/services#stress-management', //look up reach router for going to point in page
+			url: '/services', //look up reach router for going to point in page
+			ref: 'StressManagement',
 		},
 	},
 ];

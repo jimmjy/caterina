@@ -28,7 +28,7 @@ const About = () => {
 					<Row>
 						<Col>
 							{aboveImage.map((content) => (
-								<p>{content}</p>
+								<p key={content}>{content}</p>
 							))}
 						</Col>
 					</Row>
@@ -52,7 +52,7 @@ const About = () => {
 					<Row>
 						<Col>
 							{belowImage.map((content) => (
-								<p>{content}</p>
+								<p key={content}>{content}</p>
 							))}
 						</Col>
 					</Row>

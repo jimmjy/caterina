@@ -4,7 +4,7 @@ import React from 'react';
 import { PageTitle } from '../../components';
 
 //bootstrap
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 //data
 import { FEES } from '../../data/fees';
@@ -23,7 +23,7 @@ const Fees = () => {
 				</div>
 				<div className='fee-grid'>
 					{FEES.types.map((fee, i) => (
-						<Row>
+						<Row key={fee.title}>
 							<Col lg={1} />
 							<Col lg={3} className={`fee-title title-${i}`}>
 								{fee.title}
@@ -33,7 +33,9 @@ const Fees = () => {
 								className={`fee-description-container description-${i}`}
 							>
 								{fee.description.map((item) => (
-									<p className='fee-description'>{item}</p>
+									<p key={item} className='fee-description'>
+										{item}
+									</p>
 								))}
 							</Col>
 							<Col lg={1} />
@@ -42,7 +44,7 @@ const Fees = () => {
 				</div>
 				<div className='payment-container'>
 					{FEES.payment.map((payment) => (
-						<Row>
+						<Row key={payment}>
 							<Col>
 								<p>{payment}</p>
 							</Col>
@@ -51,10 +53,10 @@ const Fees = () => {
 				</div>
 				<div className='policy-container'>
 					{FEES.policies.map((policy) => (
-						<>
+						<React.Fragment key={policy.title}>
 							<h5 className='policy-title'>{policy.title}</h5>
 							<p className='policy-description'>{policy.description}</p>
-						</>
+						</React.Fragment>
 					))}
 				</div>
 			</section>

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 //components
 import { PageTitle, Quote } from '../../components';
 
 //bootstrap
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 //data
 import { STRESSORS, WHAT_I_OFFER } from '../../data/myServices';
@@ -12,7 +12,21 @@ import { STRESSORS, WHAT_I_OFFER } from '../../data/myServices';
 //styles
 import './services.scss';
 
-const Services = () => {
+const Services = ({ location }) => {
+	const references = {
+		Anxiety: useRef(null),
+		Depression: useRef(null),
+		SelfWorth: useRef(null),
+		Relationships: useRef(null),
+		StressManagement: useRef(null),
+	};
+
+	useEffect(() => {
+		const ref = references[location.state.fromLink];
+
+		ref && ref.current.scrollIntoView();
+	}, [location, references]);
+
 	return (
 		<div>
 			<PageTitle title='Services' />
@@ -27,8 +41,21 @@ const Services = () => {
 					<Row>
 						<Col>
 							{STRESSORS.map((stress) => (
-								<div className='stress-type'>
-									<h4 className='stress-title'>{stress.title}</h4>
+								<div
+									ref={references[stress.title.replace(/\s+|-/g, '')]}
+									className='stress-type'
+									key={stress.title}
+								>
+									<h4
+										id={
+											stress.title === 'Stress Management'
+												? 'Stress-Management'
+												: stress.title
+										}
+										className='stress-title'
+									>
+										{stress.title}
+									</h4>
 									<p className='stress-description'>{stress.description}</p>
 								</div>
 							))}
@@ -40,7 +67,7 @@ const Services = () => {
 							<p className='offer-listTitle'>{WHAT_I_OFFER.listTitle}</p>
 							<ul>
 								{WHAT_I_OFFER.listItems.map((item) => (
-									<li>{item}</li>
+									<li key={item}>{item}</li>
 								))}
 							</ul>
 							<p className='my-commitment'>{WHAT_I_OFFER.commitment}</p>
@@ -51,7 +78,7 @@ const Services = () => {
 						<Col>
 							<ul>
 								{WHAT_I_OFFER.treatmentList.map((treatment) => (
-									<li>{treatment}</li>
+									<li key={treatment}>{treatment}</li>
 								))}
 							</ul>
 						</Col>
