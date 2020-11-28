@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 //styles
 import "./footer.scss";
 
-const Footer = () => {
+const Footer = ({ setFooterHeight }) => {
+  const footerRef = useRef(null);
+
+  useEffect(() => {
+    console.log("footer ref", footerRef.current.getBoundingClientRect().height);
+    setFooterHeight(footerRef.current.getBoundingClientRect().height);
+  }, [footerRef, setFooterHeight]);
+
   return (
-    <footer className="page-footer font-small footer">
+    <footer ref={footerRef} className="page-footer font-small footer">
       {/* <div class="container-fluid text-center text-md-left">
         <div class="row">
           <div class="col-md-6 mt-md-0 mt-3">

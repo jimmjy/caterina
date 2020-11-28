@@ -1,25 +1,42 @@
-import React from 'react';
-import './app.scss';
-import { Router } from '@reach/router';
+import React, { useState, useEffect } from "react";
+import "./app.scss";
+import { Router } from "@reach/router";
 
 //components
-import { Navbar, Footer } from '../../components';
-import { About, Blog, Contact, Services, Fees, Home, Approach } from '../';
+import { Navbar, Footer } from "../../components";
+import { About, Blog, Contact, Services, Fees, Home, Approach } from "../";
 
-const App = () => (
-	<div className='main-page'>
-		<Navbar />
-		<Router primary={false}>
-			<Home path='/' />
-			<About path='/about' />
-			<Approach path='/approach' />
-			<Services path='/services' />
-			<Fees path='/fees' />
-			<Blog path='/blog' />
-			<Contact path='/contact' />
-		</Router>
-		<Footer />
-	</div>
-);
+const App = () => {
+  const [footerHeight, setFooterHeight] = useState(0);
+
+  useEffect(() => {
+    console.log("from app footer height", footerHeight);
+  }, [footerHeight]);
+
+  return (
+    <div className="main-page">
+      <Navbar />
+      <Router primary={false}>
+        <Home path="/" style={{ marginBottom: `${footerHeight}px` }} />
+        <About path="/about" style={{ marginBottom: `${footerHeight}px` }} />
+        <Approach
+          path="/approach"
+          style={{ marginBottom: `${footerHeight}px` }}
+        />
+        <Services
+          path="/services"
+          style={{ marginBottom: `${footerHeight}px` }}
+        />
+        <Fees path="/fees" style={{ marginBottom: `${footerHeight}px` }} />
+        <Blog path="/blog" style={{ marginBottom: `${footerHeight}px` }} />
+        <Contact
+          path="/contact"
+          style={{ marginBottom: `${footerHeight}px` }}
+        />
+      </Router>
+      <Footer setFooterHeight={setFooterHeight} />
+    </div>
+  );
+};
 
 export default App;

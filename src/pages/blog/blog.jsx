@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react";
 
 //components
-import { PageTitle } from '../../components';
+import { PageTitle } from "../../components";
 
 //styles
-import './blog.scss';
+import "./blog.scss";
 
-const Blog = () => {
-	return (
-		<div>
-			<PageTitle title='Blog' />
-		</div>
-	);
+const Blog = ({ style }) => {
+  return (
+    <div style={style}>
+      <PageTitle title="Blog" />
+    </div>
+  );
 };
 
 export default Blog;
