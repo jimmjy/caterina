@@ -14,7 +14,7 @@ import "./fees.scss";
 
 const Fees = ({ style }) => {
   return (
-    <Container style={style}>
+    <Container style={{ ...style, paddingBottom: "10px" }}>
       <PageTitle title="Fees and Insurance" />
       <section className="fees-main-content">
         <div>
@@ -24,12 +24,13 @@ const Fees = ({ style }) => {
         <div className="fee-grid">
           {FEES.types.map((fee, i) => (
             <Row key={fee.title}>
-              <Col lg={1} />
-              <Col lg={3} className={`fee-title title-${i}`}>
+              <Col md={1} sm={0} />
+              <Col md={3} sm={4} className={`fee-title title-${i}`}>
                 {fee.title}
               </Col>
               <Col
-                lg={7}
+                md={7}
+                sm={8}
                 className={`fee-description-container description-${i}`}
               >
                 {fee.description.map((item) => (
@@ -38,7 +39,7 @@ const Fees = ({ style }) => {
                   </p>
                 ))}
               </Col>
-              <Col lg={1} />
+              <Col md={1} sm={0} />
             </Row>
           ))}
         </div>

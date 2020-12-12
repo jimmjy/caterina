@@ -7,8 +7,13 @@ const Footer = ({ setFooterHeight }) => {
   const footerRef = useRef(null);
 
   useEffect(() => {
-    console.log("footer ref", footerRef.current.getBoundingClientRect().height);
-    setFooterHeight(footerRef.current.getBoundingClientRect().height);
+    function onResize() {
+      setFooterHeight(footerRef.current.getBoundingClientRect().height);
+    }
+
+    window.addEventListener("resize", onResize);
+
+    return () => window.removeEventListener("resize", onResize);
   }, [footerRef, setFooterHeight]);
 
   return (

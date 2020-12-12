@@ -9,11 +9,15 @@ import { PageTitle } from "../../components";
 //data
 import { MY_APPROACH } from "../../data/myApproach";
 
+//images
+import approachImage from "../../assets/approach-image.jpg";
+
 //styles
 import "./approach.scss";
 
 const Approach = ({ style }) => {
   const { title, aboveImage, belowImage } = MY_APPROACH;
+  console.log("style", style);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,9 +35,13 @@ const Approach = ({ style }) => {
               ))}
             </Col>
           </Row>
-          <Row>
-            <Col>
-              <b>Image here</b>
+          <Row className="justify-content-center">
+            <Col sm={8}>
+              <img
+                className="approach-image"
+                src={approachImage}
+                alt="overlooking a river"
+              />
             </Col>
           </Row>
           <Row>

@@ -1,6 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.scss";
+import { FormspreeProvider } from "@formspree/react";
+
+//components
 import { App } from "./pages";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+//styles
+import "./index.scss";
+
+ReactDOM.render(
+  <FormspreeProvider project="1566029286689734121">
+    <App />
+  </FormspreeProvider>,
+  document.getElementById("root")
+);

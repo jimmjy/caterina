@@ -13,6 +13,7 @@ export const SERVICES = [
       url: "/services", //look up reach router for going to point in page,
       ref: "Anxiety",
     },
+    style: { backgroundColor: "#8E8C89" },
   },
   {
     title: "Depression",
@@ -23,6 +24,7 @@ export const SERVICES = [
       url: "/services", //look up reach router for going to point in page,
       ref: "Depression",
     },
+    style: { backgroundColor: "#BFBBB7" },
   },
   {
     title: "Self-Worth",
@@ -33,6 +35,7 @@ export const SERVICES = [
       url: "/services", //look up reach router for going to point in page
       ref: "SelfWorth",
     },
+    style: { backgroundColor: "#FEF9C7" },
   },
   {
     title: "Relationships",
@@ -40,9 +43,10 @@ export const SERVICES = [
       "Interactions with other people are the cornerstone of our lives. Therapy can help make these interactions more meaningful.",
     link: {
       title: "Read More",
-      url: "/services", //look up reach router for going to point in page,
+      url: "/services",
       ref: "Relationships",
     },
+    style: { backgroundColor: "#CEF6EB" },
   },
   {
     title: "Stress Management",
@@ -50,9 +54,9 @@ export const SERVICES = [
       "Left unchecked, stress can impact our physical, mental and emotional health and well-being.",
     link: {
       title: "Read More",
-      url: "/services", //look up reach router for going to point in page
-      ref: "StressManagement",
+      url: "/services",
     },
+    style: { backgroundColor: "#55949C" },
   },
 ];
 

@@ -32,23 +32,20 @@ const About = ({ style }) => {
               ))}
             </Col>
           </Row>
-          <Row>
-            {/* adding a quote here */}
-            <Col lg={2} />
-            <Col lg={5}>
+          <Row className="about-page-quote">
+            <Col lg={6} md={7} sm={12} className="quote-container">
               <Quote quote={imageQuote} />
             </Col>
-            <Col lg={4}>
+            <Col lg={1} md={1} />
+            <Col lg={4} md={4} sm={1}>
               <Image
-                width={200}
-                height={200}
+                className="pic-container"
                 src={profilePic}
                 thumbnail
                 roundedCircle
                 fluid
               />
             </Col>
-            {/* <Col lg={7}>2 of 2</Col> */}
           </Row>
           <Row>
             <Col>

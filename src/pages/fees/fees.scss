@@ -1,40 +1,50 @@
 .fee-grid {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .fee-title {
-	height: 200px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	// color: white;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-	&.title-0 {
-		background-color: #b2f1df;
-	}
+  &.title-0 {
+    background-color: #b2f1df;
+  }
 
-	&.title-1 {
-		background-color: #35858d;
-	}
+  &.title-1 {
+    background-color: #35858d;
+  }
 }
 
 .fee-description-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	// color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-	&.description-0 {
-		background-color: #9fedd7;
-	}
+  &.description-0 {
+    background-color: #9fedd7;
+  }
 
-	&.description-1 {
-		background-color: #026670;
-	}
+  &.description-1 {
+    background-color: #026670;
+  }
 }
 
 .fee-description {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 550px) {
+  .fee-title {
+    height: 50px;
+  }
+
+  .fee-description-container {
+    padding: 10px 0;
+  }
 }

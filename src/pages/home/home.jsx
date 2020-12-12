@@ -17,7 +17,6 @@ import { Link } from "@reach/router";
 import "./home.scss";
 
 const Home = ({ style }) => {
-  console.log("process", process.env.REACT_APP_NOT_SECRET_CODE);
   const { name, profession } = MAIN_TITLE;
   return (
     <div style={style}>
@@ -33,14 +32,24 @@ const Home = ({ style }) => {
           <p className="title-profession">{profession}</p>
         </Col>
       </Row>
-      <Container className="service-container">
+      <Container fluid>
         <Row>
-          {SERVICES.map(({ title, description, link }) => {
+          {SERVICES.map(({ title, description, link, style }) => {
             return (
-              <Col className="service" key={title}>
-                <h2>{title}</h2>
+              <Col
+                sm={12}
+                md={true}
+                className="service"
+                key={title}
+                style={style}
+              >
+                <h2 className="service-title">{title}</h2>
                 <p>{description}</p>
-                <Link to={link.url} state={{ fromLink: link.ref }}>
+                <Link
+                  className="service-link"
+                  to={link.url}
+                  state={{ fromLink: link.ref }}
+                >
                   {link.title}
                 </Link>
               </Col>
@@ -48,26 +57,27 @@ const Home = ({ style }) => {
           })}
         </Row>
       </Container>
-      {/* add background color to container below */}
-      <Container>
+      <Container fluid>
         <Row>
-          <Col sm={4}>
+          <Col lg={4} md={4} sm={12} className="about-container">
+            <PageTitle title={ABOUT_ME.title} />
+            <div className="about-me">
+              {ABOUT_ME.description.map((description) => (
+                <p className="about-me" key={description}>
+                  {description}
+                </p>
+              ))}
+            </div>
+          </Col>
+          <Col lg={3} md={4} sm={6} className="about-image">
+            <Image className="profile-image" src={cateImage} />
+          </Col>
+          <Col lg={5} md={4} sm={6} className="approach-container">
             <PageTitle title={APPROACH.title} />
             <p className="approach-description">{APPROACH.description}</p>
             <Link className="approach-link" to={APPROACH.link.url}>
               {APPROACH.link.title}
             </Link>
-          </Col>
-          <Col sm={3}>
-            <Image className="profile-image" src={cateImage} />
-          </Col>
-          <Col sm={5}>
-            <PageTitle title={ABOUT_ME.title} />
-            <div className="about-me">
-              {ABOUT_ME.description.map((description) => (
-                <p className="about-me">{description}</p>
-              ))}
-            </div>
           </Col>
         </Row>
       </Container>

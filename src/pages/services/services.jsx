@@ -6,6 +6,9 @@ import { PageTitle, Quote } from "../../components";
 //bootstrap
 import { Container, Row, Col } from "react-bootstrap";
 
+//image
+import servicesImage from "../../assets/services-image.jpg";
+
 //data
 import { STRESSORS, WHAT_I_OFFER } from "../../data/myServices";
 
@@ -28,7 +31,7 @@ const Services = ({ location, style }) => {
   }, [location, references]);
 
   return (
-    <div style={style}>
+    <div className="services-container" style={style}>
       <PageTitle title="Services" />
       <Quote
         quote={
@@ -74,7 +77,13 @@ const Services = ({ location, style }) => {
             </Col>
           </Row>
           <Row>
-            <Col lg={6}>image</Col>
+            <Col lg={6}>
+              <img
+                className="services-image"
+                src={servicesImage}
+                alt="hands overlooking water"
+              />
+            </Col>
             <Col>
               <ul>
                 {WHAT_I_OFFER.treatmentList.map((treatment) => (
