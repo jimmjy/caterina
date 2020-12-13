@@ -28,7 +28,7 @@ export const FEES = {
     {
       title: "Cancellation Policy",
       description: [
-        "I require 24 hours advance notice to cancel or reschedule an appointment. Please notify me by email, phone, or through the online scheduler portal. ",
+        "I require 24 hours advance notice to cancel or reschedule an appointment. Please notify me by email, or phone. ",
         "Late cancellations (those with less than 24 hour notification) and no-shows (cancellations with no notification) will be charged for a full session per the practice policy. ",
         "Please note that if you arrive late to your session, we will begin as soon as you arrive, within 15 minutes of the scheduled start time. If you arrive more than 15 minutes late for your scheduled appointment, your session will be considered a late cancellation. As a courtesy to all clients, your session will still end on time. This avoids overlap with the next client’s session. ",
       ],

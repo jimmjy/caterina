@@ -86,30 +86,26 @@ const Contact = ({ style }) => {
                   Send Message
                 </button>
               </div>
-              <div className="contact-information">
-                {/* address */}
-                {/* phone logo and phone number */}
-                {/* email logo and email address */}
+              <div className="contact-me-info">
+                <p className="call-me">
+                  <a className="call-me-icon" href="tel:+16478727011">
+                    <span>&#9742;</span>
+                    <p className="call-me-number">1-647-872-7011</p>
+                  </a>
+                </p>
+                <p className="email-me">
+                  <a
+                    href="mailto:cate@categennaro.com"
+                    className="email-me-link"
+                  >
+                    <span className="email-me-icon">&#9993;</span>
+                    <p className="email-me-address">cate@categennaro.com</p>
+                  </a>
+                </p>
               </div>
-              {/* <label htmlFor="email">Email Address</label> */}
-              {/* <input id="email" type="email" name="email" /> */}
             </form>
           </Col>
         </Row>
-        {/* <Form onSubmit={handleSubmit}>
-          <label htmlFor="email">Email Address</label>
-          <input id="email" type="email" name="email" />
-          <ValidationError prefix="Email" field="email" errors={state.errors} />
-          <textarea id="message" name="message" />
-          <ValidationError
-            prefix="Message"
-            field="message"
-            errors={state.errors}
-          />
-          <button type="submit" disabled={state.submitting}>
-            Submit
-          </button>
-        </Form> */}
       </Container>
     </div>
   );

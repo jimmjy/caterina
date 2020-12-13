@@ -18,10 +18,12 @@ input {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 5px;
   font-size: 12px;
+  margin-bottom: 20px;
 }
 
 .contact-info {
   border-bottom: 1px solid rgb(196, 191, 191);
+  margin-bottom: 10px;
 }
 
 .contact-name {
@@ -30,7 +32,6 @@ input {
   margin-bottom: 20px;
 }
 
-// when mobile this will be squished
 .first-name,
 .last-name {
   display: flex;
@@ -66,8 +67,73 @@ input {
   border: 1px solid rgb(167, 180, 180);
   border-radius: 4px;
   font-size: 16px;
-  // font-weight: bold;
   background-color: teal;
   color: #fff;
   margin-bottom: 20px;
+}
+
+.contact-me-info {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 2px;
+}
+
+.call-me-icon,
+.email-me-link {
+  display: flex;
+  justify-content: center;
+  line-height: 20px;
+  font-size: 20px;
+  margin: 0 3px;
+  text-decoration: none;
+  color: black;
+
+  & > span {
+    margin-right: 10px;
+  }
+
+  &:hover,
+  &:active,
+  &:link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.email-me-address {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-me-icon {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  .contact-name {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .first-name,
+  .last-name {
+    width: 100%;
+  }
+
+  .first-name {
+    margin-bottom: 13px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .call-me-icon {
+    line-height: 16px;
+    font-size: 16px;
+  }
+
+  .email-me-link {
+    font-size: 16px;
+  }
 }
