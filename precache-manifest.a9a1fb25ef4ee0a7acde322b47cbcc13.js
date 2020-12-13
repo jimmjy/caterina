@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2ae46c560d4d8fa1986fb0a72f73ba47",
+    "revision": "4899cef74ec4e6f46af307a8d5674f31",
     "url": "/caterina/index.html"
   },
   {
-    "revision": "9b1665a0413093d5746c",
-    "url": "/caterina/static/css/main.077c3b29.chunk.css"
+    "revision": "f6cbfbb3f2a075f420ef",
+    "url": "/caterina/static/css/main.b549eeac.chunk.css"
   },
   {
     "revision": "0d13bf0479d20561a65e",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/caterina/static/js/2.4501058e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9b1665a0413093d5746c",
-    "url": "/caterina/static/js/main.15f810a1.chunk.js"
+    "revision": "f6cbfbb3f2a075f420ef",
+    "url": "/caterina/static/js/main.2c60e12b.chunk.js"
   },
   {
     "revision": "c2fc3d3d526cd8cea65b",
