@@ -38,7 +38,7 @@ export const STRESSORS = [
 ];
 
 export const WHAT_I_OFFER = {
-  title: "As your therapist…",
+  title: "As your therapist, I provide services ...",
   listTitle: "I consider myself to be:",
   listItems: [
     "LGBTQIA+ friendly",

@@ -67,6 +67,11 @@ const Services = ({ location, style }) => {
           <Row>
             <Col>
               <p className="offer-title">{WHAT_I_OFFER.title}</p>
+              <ul>
+                {WHAT_I_OFFER.treatmentList.map((treatment) => (
+                  <li key={treatment}>{treatment}</li>
+                ))}
+              </ul>
               <p className="offer-listTitle">{WHAT_I_OFFER.listTitle}</p>
               <ul>
                 {WHAT_I_OFFER.listItems.map((item) => (
@@ -83,13 +88,6 @@ const Services = ({ location, style }) => {
                 src={servicesImage}
                 alt="hands overlooking water"
               />
-            </Col>
-            <Col>
-              <ul>
-                {WHAT_I_OFFER.treatmentList.map((treatment) => (
-                  <li key={treatment}>{treatment}</li>
-                ))}
-              </ul>
             </Col>
           </Row>
         </Container>
