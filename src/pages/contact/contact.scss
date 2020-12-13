@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.thank-you {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+
 .spacer {
   height: 50px;
 }
@@ -29,7 +36,7 @@ input {
 .contact-name {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .first-name,
@@ -88,7 +95,7 @@ input {
   text-decoration: none;
   color: black;
 
-  & > span {
+  & > i {
     margin-right: 10px;
   }
 
@@ -109,6 +116,18 @@ input {
 
 .email-me-icon {
   font-size: 30px;
+}
+
+.fa-envelope {
+  margin-top: 3px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 75px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 500px) {

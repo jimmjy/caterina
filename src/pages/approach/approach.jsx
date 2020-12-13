@@ -17,7 +17,6 @@ import "./approach.scss";
 
 const Approach = ({ style }) => {
   const { title, aboveImage, belowImage } = MY_APPROACH;
-  console.log("style", style);
 
   useEffect(() => {
     window.scrollTo(0, 0);

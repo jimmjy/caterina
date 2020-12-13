@@ -5,7 +5,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import { PageTitle } from "../../components";
 
 //bootstrap
-import { Container, Row, Col, Form } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 //data
 import { CONTACT } from "../../data/contact";
@@ -17,8 +17,17 @@ const Contact = ({ style }) => {
   const [state, handleSubmit] = useForm("contactForm");
 
   if (state.succeeded) {
-    return <p>Thanks for reaching out, we look forward to contacting you!</p>;
+    return (
+      <Container>
+        <Row className="justify-content-center">
+          <Col sm={8} className="thank-you">
+            <p >Thanks for reaching out, we look forward to contacting you!</p>
+          </Col>
+        </Row>
+      </Container>
+    );
   }
+
   return (
     <div style={style}>
       <Container>
@@ -87,21 +96,39 @@ const Contact = ({ style }) => {
                 </button>
               </div>
               <div className="contact-me-info">
-                <p className="call-me">
+                <div className="call-me">
                   <a className="call-me-icon" href="tel:+16478727011">
-                    <span>&#9742;</span>
+                    <i className="fas fa-phone"></i>
                     <p className="call-me-number">1-647-872-7011</p>
                   </a>
-                </p>
-                <p className="email-me">
+                </div>
+                <div className="email-me">
                   <a
                     href="mailto:cate@categennaro.com"
                     className="email-me-link"
                   >
-                    <span className="email-me-icon">&#9993;</span>
+                    <i className="fas fa-envelope"></i>
                     <p className="email-me-address">cate@categennaro.com</p>
                   </a>
-                </p>
+                </div>
+              </div>
+              <div className="social-media">
+                <a
+                  className="email-me-link"
+                  href={"//www.instagram.com/categennaro/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a
+                  className="email-me-link"
+                  href={"//www.linkedin.com/in/katiegennaro"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-linkedin"></i>
+                </a>
               </div>
             </form>
           </Col>

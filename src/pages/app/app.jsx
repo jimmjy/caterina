@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./app.scss";
 import { Router, createHistory, LocationProvider } from "@reach/router";
 import createHashHistory from "hash-source";
@@ -12,10 +12,6 @@ const App = () => {
   const history = createHistory(source);
 
   const [footerHeight, setFooterHeight] = useState(0);
-
-  useEffect(() => {
-    console.log("from app footer height", footerHeight);
-  }, [footerHeight]);
 
   return (
     <LocationProvider history={history}>
